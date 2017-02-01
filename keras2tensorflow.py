@@ -2,21 +2,18 @@ import tensorflow as tf
 import numpy as np
 import struct
 
-# define layers
 LAYER_CONV2D = 1
 LAYER_ACTIVATION = 2
 LAYER_MAXPOOL = 3
 LAYER_FLATTEN = 4
 LAYER_DENSE = 5
 
-#define activation types
 ACTIVATION_UNKNOWN = 0
 ACTIVATION_LINEAR = 1
 ACTIVATION_RELU = 2
 ACTIVATION_SOFTMAX = 3
 
 #####################################################################
-# save floats to file
 def save_floats(file, floats):
     '''
     Writes floats to file in 1024 chunks.. prevents memory explosion
@@ -33,12 +30,10 @@ def save_floats(file, floats):
     assert written == len(floats)
 
 #####################################################################
-# load floats from file, not complete yet.
 def load_floats(file, count): assert False, "UNSUPPORT"
 
 
 #####################################################################
-# keras's Convolution2D layer
 class keras_conv2d:
     weights = None
     biases = None
@@ -70,7 +65,6 @@ class keras_conv2d:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
-# keras's Activation layer
 class keras_activation:
     activation = ACTIVATION_UNKNOWN
 
@@ -102,7 +96,6 @@ class keras_activation:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
-# keras's MaxPooling2D layer
 class keras_maxpool:
     pool_size = None
     padding = None
@@ -128,7 +121,6 @@ class keras_maxpool:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
-# keras's Flatten layer
 class keras_flatten:
     def __init__(self, keras_layer):None
 
@@ -142,7 +134,6 @@ class keras_flatten:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
-# keras's Dense layer
 class keras_dense:
     weights = None
     biases = None
@@ -168,11 +159,12 @@ class keras_dense:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
-# use this to convert from keras's model to tensorflow's layers
 class keras2tensorflow:
     layers = []
+    input_shape = []
 
     def __init__(self, keras_model):
+        self.input_shape = keras_model.layers[0].batch_input_shape
         for keras_layer in keras_model.layers:
             layer_type = type(keras_layer).__name__
 
@@ -191,7 +183,7 @@ class keras2tensorflow:
                 assert False, "Unsupported layer type: %s" % layer_type
             
             self.layers.append(tf_layer)
-    
+
     def dump_tf_layer(self, prev_tf_layer):
         for tf_layer in self.layers:
             prev_tf_layer = tf_layer.dump_tf_layer(prev_tf_layer)
@@ -204,3 +196,23 @@ class keras2tensorflow:
 
             for tf_layer in self.layers:
                 tf_layer.save_to_file(f)
+
+    def save_protobuf(self, filename):
+        graph_dump = tf.Graph()
+        with graph_dump.as_default():
+            tf_input = tf.placeholder("float32", self.input_shape, name="input")
+            tf_prediction = self.dump_tf_layer(tf_input)
+            tf_output = tf.add(tf_prediction, 0, name="output")
+
+            sess = tf.Session()
+            graph_def = graph_dump.as_graph_def()
+            tf.train.write_graph(graph_def, '', filename, as_text=False)
+            sess.close()
+
+    def prediction(self, data):
+        sess = tf.Session()
+        tf_input = tf.placeholder("float32", self.input_shape, name="input")
+        tf_prediction = self.dump_tf_layer(tf_input)
+        result = sess.run(tf_prediction, feed_dict={tf_input:data})
+        sess.close()
+        return result
