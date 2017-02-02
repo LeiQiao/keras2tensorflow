@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2AE63243FE519E3C646974BF87D7D3FB28968E75",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "33D52F4851FE2020973A2BB8D96D627523CB764A" : 9223372036854775807,
+    "2AE63243FE519E3C646974BF87D7D3FB28968E75" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5CE3BB04-5163-49FE-9796-C2AC30E45297",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "33D52F4851FE2020973A2BB8D96D627523CB764A" : "..\/..",
+    "2AE63243FE519E3C646974BF87D7D3FB28968E75" : "keras2tensorflow\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "testKeras2Tensorflow",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "test\/testKeras2Tensorflow.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LeiQiao\/keras2tensorflow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2AE63243FE519E3C646974BF87D7D3FB28968E75"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chinapnr\/OCR.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "33D52F4851FE2020973A2BB8D96D627523CB764A"
+    }
+  ]
+}

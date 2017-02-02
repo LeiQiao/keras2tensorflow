@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		452D46F31E3F35F100B02956 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452D46F21E3F35F100B02956 /* main.cpp */; };
+		452D46FA1E3F363300B02956 /* testKeras2Tensorflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */; };
+		4588A2E71E41AD1F008529E3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4588A2E61E41AD1F008529E3 /* libz.tbd */; };
+		4588A2F41E43489A008529E3 /* keras2tensorflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588A2F21E43489A008529E3 /* keras2tensorflow.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,10 @@
 
 /* Begin PBXFileReference section */
 		452D46EF1E3F35F100B02956 /* testKeras2Tensorflow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testKeras2Tensorflow; sourceTree = BUILT_PRODUCTS_DIR; };
-		452D46F21E3F35F100B02956 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testKeras2Tensorflow.cpp; sourceTree = SOURCE_ROOT; };
+		4588A2E61E41AD1F008529E3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4588A2F21E43489A008529E3 /* keras2tensorflow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = keras2tensorflow.cpp; path = ../keras2tensorflow.cpp; sourceTree = SOURCE_ROOT; };
+		4588A2F31E43489A008529E3 /* keras2tensorflow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = keras2tensorflow.hpp; path = ../keras2tensorflow.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4588A2E71E41AD1F008529E3 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				452D46F11E3F35F100B02956 /* testKeras2Tensorflow */,
 				452D46F01E3F35F100B02956 /* Products */,
+				4588A2E51E41AD1F008529E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +64,27 @@
 		452D46F11E3F35F100B02956 /* testKeras2Tensorflow */ = {
 			isa = PBXGroup;
 			children = (
-				452D46F21E3F35F100B02956 /* main.cpp */,
+				4588A2F11E43488E008529E3 /* keras2tensorflow */,
+				452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */,
 			);
 			path = testKeras2Tensorflow;
+			sourceTree = "<group>";
+		};
+		4588A2E51E41AD1F008529E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4588A2E61E41AD1F008529E3 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4588A2F11E43488E008529E3 /* keras2tensorflow */ = {
+			isa = PBXGroup;
+			children = (
+				4588A2F21E43489A008529E3 /* keras2tensorflow.cpp */,
+				4588A2F31E43489A008529E3 /* keras2tensorflow.hpp */,
+			);
+			name = keras2tensorflow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452D46F31E3F35F100B02956 /* main.cpp in Sources */,
+				4588A2F41E43489A008529E3 /* keras2tensorflow.cpp in Sources */,
+				452D46FA1E3F363300B02956 /* testKeras2Tensorflow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +242,28 @@
 		452D46F71E3F35F100B02956 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"../../../../compile/tensorflow-master/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/protobuf/src/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/proto",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/eigen",
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../compile/tensorflow-master/release/lib/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/protobuf-host/lib/",
+					/usr/local/lib/,
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ltensorflow-core",
+					"-lprotobuf",
+					"-lstdc++",
+					"-lopencv_core",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +271,28 @@
 		452D46F81E3F35F100B02956 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"../../../../compile/tensorflow-master/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/protobuf/src/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/proto",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/eigen",
+					/usr/local/include/,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"../../../../compile/tensorflow-master/release/lib/",
+					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/protobuf-host/lib/",
+					/usr/local/lib/,
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ltensorflow-core",
+					"-lprotobuf",
+					"-lstdc++",
+					"-lopencv_core",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +316,7 @@
 				452D46F81E3F35F100B02956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
