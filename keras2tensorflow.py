@@ -7,11 +7,13 @@ LAYER_ACTIVATION = 2
 LAYER_MAXPOOL = 3
 LAYER_FLATTEN = 4
 LAYER_DENSE = 5
+LAYER_DROPOUT = 6
 
 ACTIVATION_UNKNOWN = 0
 ACTIVATION_LINEAR = 1
 ACTIVATION_RELU = 2
 ACTIVATION_SOFTMAX = 3
+ACTIVATION_TANH = 4
 
 #####################################################################
 def save_floats(file, floats):
@@ -76,6 +78,8 @@ class keras_activation:
             self.activation = ACTIVATION_RELU
         elif act == "softmax":
             self.activation = ACTIVATION_SOFTMAX
+        elif act == "tanh":
+            self.activation = ACTIVATION_TANH
         else:
             assert False, "Unsupported activation type: %s" % act
         
@@ -87,6 +91,8 @@ class keras_activation:
             tf_layer = tf.nn.relu(prev_tf_layer)
         elif self.activation == ACTIVATION_SOFTMAX:
             tf_layer = tf.nn.softmax(prev_tf_layer)
+        elif self.activation == ACTIVATION_TANH:
+            tf_layer = tf.tanh(prev_tf_layer)
         return tf_layer
 
     def save_to_file(self, file):
@@ -159,6 +165,25 @@ class keras_dense:
     def load_from_file(self, file): assert False, "UNSUPPORT"
 
 #####################################################################
+class keras_dropout:
+    p = 0
+    
+    def __init__(self, keras_layer):
+        self.p = keras_layer.p
+
+    def dump_tf_layer(self, prev_tf_layer):
+        # prob = tf.constant(self.p)
+        prob = tf.constant(1.0)
+        tf_layer = tf.nn.dropout(prev_tf_layer, prob)
+        return tf_layer
+
+    def save_to_file(self, file):
+        file.write(struct.pack('I', LAYER_DROPOUT))
+        file.write(struct.pack('f', p))
+
+    def load_from_file(self, file): assert False, "UNSUPPORT"
+
+#####################################################################
 class keras2tensorflow:
     layers = []
     input_shape = []
@@ -179,6 +204,8 @@ class keras2tensorflow:
                 tf_layer = keras_flatten(keras_layer)
             elif layer_type == "Dense":
                 tf_layer = keras_dense(keras_layer)
+            elif layer_type == "Dropout":
+                tf_layer = keras_dropout(keras_layer)
             else:
                 assert False, "Unsupported layer type: %s" % layer_type
             

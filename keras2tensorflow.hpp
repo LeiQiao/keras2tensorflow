@@ -31,6 +31,7 @@ enum {
     kLayerMaxPool,
     kLayerFlatten,
     kLayerDense,
+    kLayerDropout,
     kLayerCount
 };
 
@@ -40,6 +41,7 @@ enum {
     kActivationLinear,
     kActivationRelu,
     kActivationSoftmax,
+    kActivationTanh,
     kActivationCount
 };
 
@@ -134,6 +136,23 @@ private:
     tensorflow::Tensor mWeights;
     tensorflow::Tensor mBiases;
 };
+
+/////////////////////////////////////////////////////////////////////
+// keras's Dropout layer
+class KerasDropout : public KerasLayer
+{
+public:
+    KerasDropout();
+    virtual ~KerasDropout();
+
+public:
+    virtual bool loadFromFile(std::ifstream* file);
+    
+private:
+    float mProb;
+};
+
+
 
 /////////////////////////////////////////////////////////////////////
 // use this to convert from keras's model to tensorflow's layers

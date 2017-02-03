@@ -189,6 +189,26 @@ bool KerasDense::loadFromFile(std::ifstream *file)
 }
 
 /////////////////////////////////////////////////////////////////////
+// keras's Dropout layer
+
+KerasDropout::KerasDropout()
+{
+}
+
+KerasDropout::~KerasDropout()
+{
+}
+
+bool KerasDropout::loadFromFile(std::ifstream *file)
+{
+    KASSERT(file, "Invalid file stream");
+    
+    KASSERT(readFloat(file, &mProb), "Expected prob");
+    
+    return true;
+}
+
+/////////////////////////////////////////////////////////////////////
 // protobuf input stream
 
 class IfstreamInputStream : public ::google::protobuf::io::CopyingInputStream
@@ -335,6 +355,9 @@ bool Keras2Tensorflow::loadFromFile(std::ifstream* file)
             break;
             case kLayerDense:
                 newLayer = new KerasDense();
+            break;
+            case kLayerDropout:
+                newLayer = new KerasDropout();
             break;
             default:
                 KASSERT(false, "Unsupported layer type: %d", layerType);
