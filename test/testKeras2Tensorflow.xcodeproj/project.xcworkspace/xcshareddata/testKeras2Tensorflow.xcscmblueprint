@@ -1,14 +1,18 @@
 {
   "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2AE63243FE519E3C646974BF87D7D3FB28968E75",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "ae77fb25-15aa-4af2-91ce-baa0e43349f9++1737" : {
 
+    }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ae77fb25-15aa-4af2-91ce-baa0e43349f9++1737" : 9223372036854775807,
     "33D52F4851FE2020973A2BB8D96D627523CB764A" : 9223372036854775807,
     "2AE63243FE519E3C646974BF87D7D3FB28968E75" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5CE3BB04-5163-49FE-9796-C2AC30E45297",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ae77fb25-15aa-4af2-91ce-baa0e43349f9++1737" : "",
     "33D52F4851FE2020973A2BB8D96D627523CB764A" : "..\/..",
     "2AE63243FE519E3C646974BF87D7D3FB28968E75" : "keras2tensorflow\/"
   },
@@ -25,6 +29,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chinapnr\/OCR.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "33D52F4851FE2020973A2BB8D96D627523CB764A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/lei.qiao@192.168.0.178\/svn\/InfoCenter",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ae77fb25-15aa-4af2-91ce-baa0e43349f9++1737"
     }
   ]
 }

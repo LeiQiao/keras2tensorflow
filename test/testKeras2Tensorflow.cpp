@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
     {
         // open image
         char filename[1024];
-        sprintf(filename, "/Users/lei.qiao/Desktop/POC/OCR/SmartReaderLib/Tools/keras2tensorflow/test/%d.png", i);
+        sprintf(filename, "%d.png", i);
         
         cv::Mat image = cv::imread(filename);
         

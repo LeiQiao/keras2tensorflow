@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452846231E5C0B070014F82B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 452846221E5C0B070014F82B /* main.m */; };
+		452846261E5C0B070014F82B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 452846251E5C0B070014F82B /* AppDelegate.m */; };
+		452846291E5C0B070014F82B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 452846281E5C0B070014F82B /* ViewController.mm */; };
+		4528462C1E5C0B070014F82B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4528462A1E5C0B070014F82B /* Main.storyboard */; };
+		4528462E1E5C0B070014F82B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4528462D1E5C0B070014F82B /* Assets.xcassets */; };
+		452846311E5C0B070014F82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4528462F1E5C0B070014F82B /* LaunchScreen.storyboard */; };
+		452846361E5C0C180014F82B /* keras2tensorflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588A2F21E43489A008529E3 /* keras2tensorflow.cpp */; };
+		4528463A1E5C0E3F0014F82B /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452846391E5C0E3F0014F82B /* opencv2.framework */; };
+		452846461E5C0E570014F82B /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 4528463B1E5C0E570014F82B /* 0.png */; };
+		452846471E5C0E570014F82B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4528463C1E5C0E570014F82B /* 1.png */; };
+		452846481E5C0E570014F82B /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4528463D1E5C0E570014F82B /* 2.png */; };
+		452846491E5C0E570014F82B /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4528463E1E5C0E570014F82B /* 3.png */; };
+		4528464A1E5C0E570014F82B /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4528463F1E5C0E570014F82B /* 4.png */; };
+		4528464B1E5C0E570014F82B /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 452846401E5C0E570014F82B /* 5.png */; };
+		4528464C1E5C0E570014F82B /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 452846411E5C0E570014F82B /* 6.png */; };
+		4528464D1E5C0E570014F82B /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 452846421E5C0E570014F82B /* 7.png */; };
+		4528464E1E5C0E570014F82B /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 452846431E5C0E570014F82B /* 8.png */; };
+		4528464F1E5C0E570014F82B /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 452846441E5C0E570014F82B /* 9.png */; };
+		452846501E5C0E570014F82B /* mnist.pb in Resources */ = {isa = PBXBuildFile; fileRef = 452846451E5C0E570014F82B /* mnist.pb */; };
+		452846521E5C15DE0014F82B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452846511E5C15DE0014F82B /* AVFoundation.framework */; };
+		452846541E5C15F60014F82B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452846531E5C15F60014F82B /* CoreMedia.framework */; };
+		452846561E5C16100014F82B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452846551E5C16100014F82B /* AssetsLibrary.framework */; };
+		452846581E5C169C0014F82B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452846571E5C169C0014F82B /* Accelerate.framework */; };
 		452D46FA1E3F363300B02956 /* testKeras2Tensorflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */; };
 		4588A2E71E41AD1F008529E3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4588A2E61E41AD1F008529E3 /* libz.tbd */; };
 		4588A2F41E43489A008529E3 /* keras2tensorflow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588A2F21E43489A008529E3 /* keras2tensorflow.cpp */; };
@@ -25,6 +48,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4528461F1E5C0B070014F82B /* testKeras2Tensorflow_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testKeras2Tensorflow_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		452846221E5C0B070014F82B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		452846241E5C0B070014F82B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		452846251E5C0B070014F82B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		452846271E5C0B070014F82B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		452846281E5C0B070014F82B /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		4528462B1E5C0B070014F82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4528462D1E5C0B070014F82B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		452846301E5C0B070014F82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		452846321E5C0B070014F82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452846391E5C0E3F0014F82B /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../../Frameworks/opencv2.framework; sourceTree = "<group>"; };
+		4528463B1E5C0E570014F82B /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = SOURCE_ROOT; };
+		4528463C1E5C0E570014F82B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = SOURCE_ROOT; };
+		4528463D1E5C0E570014F82B /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = SOURCE_ROOT; };
+		4528463E1E5C0E570014F82B /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = SOURCE_ROOT; };
+		4528463F1E5C0E570014F82B /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = SOURCE_ROOT; };
+		452846401E5C0E570014F82B /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = SOURCE_ROOT; };
+		452846411E5C0E570014F82B /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = SOURCE_ROOT; };
+		452846421E5C0E570014F82B /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = SOURCE_ROOT; };
+		452846431E5C0E570014F82B /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = SOURCE_ROOT; };
+		452846441E5C0E570014F82B /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = SOURCE_ROOT; };
+		452846451E5C0E570014F82B /* mnist.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mnist.pb; sourceTree = SOURCE_ROOT; };
+		452846511E5C15DE0014F82B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		452846531E5C15F60014F82B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		452846551E5C16100014F82B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		452846571E5C169C0014F82B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.1.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		452D46EF1E3F35F100B02956 /* testKeras2Tensorflow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testKeras2Tensorflow; sourceTree = BUILT_PRODUCTS_DIR; };
 		452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testKeras2Tensorflow.cpp; sourceTree = SOURCE_ROOT; };
 		4588A2E61E41AD1F008529E3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -33,6 +82,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4528461C1E5C0B070014F82B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452846581E5C169C0014F82B /* Accelerate.framework in Frameworks */,
+				452846561E5C16100014F82B /* AssetsLibrary.framework in Frameworks */,
+				452846541E5C15F60014F82B /* CoreMedia.framework in Frameworks */,
+				452846521E5C15DE0014F82B /* AVFoundation.framework in Frameworks */,
+				4528463A1E5C0E3F0014F82B /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		452D46EC1E3F35F100B02956 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +105,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452846201E5C0B070014F82B /* testKeras2Tensorflow_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				452846381E5C0E250014F82B /* Resources */,
+				452846371E5C0E1B0014F82B /* Frameworks */,
+				452846241E5C0B070014F82B /* AppDelegate.h */,
+				452846251E5C0B070014F82B /* AppDelegate.m */,
+				452846271E5C0B070014F82B /* ViewController.h */,
+				452846281E5C0B070014F82B /* ViewController.mm */,
+				4528462A1E5C0B070014F82B /* Main.storyboard */,
+				4528462D1E5C0B070014F82B /* Assets.xcassets */,
+				4528462F1E5C0B070014F82B /* LaunchScreen.storyboard */,
+				452846321E5C0B070014F82B /* Info.plist */,
+				452846211E5C0B070014F82B /* Supporting Files */,
+			);
+			path = testKeras2Tensorflow_iOS;
+			sourceTree = "<group>";
+		};
+		452846211E5C0B070014F82B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452846221E5C0B070014F82B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		452846371E5C0E1B0014F82B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452846391E5C0E3F0014F82B /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		452846381E5C0E250014F82B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4528463B1E5C0E570014F82B /* 0.png */,
+				4528463C1E5C0E570014F82B /* 1.png */,
+				4528463D1E5C0E570014F82B /* 2.png */,
+				4528463E1E5C0E570014F82B /* 3.png */,
+				4528463F1E5C0E570014F82B /* 4.png */,
+				452846401E5C0E570014F82B /* 5.png */,
+				452846411E5C0E570014F82B /* 6.png */,
+				452846421E5C0E570014F82B /* 7.png */,
+				452846431E5C0E570014F82B /* 8.png */,
+				452846441E5C0E570014F82B /* 9.png */,
+				452846451E5C0E570014F82B /* mnist.pb */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		452D46E61E3F35F100B02956 = {
 			isa = PBXGroup;
 			children = (
+				4588A2F11E43488E008529E3 /* keras2tensorflow */,
 				452D46F11E3F35F100B02956 /* testKeras2Tensorflow */,
+				452846201E5C0B070014F82B /* testKeras2Tensorflow_iOS */,
 				452D46F01E3F35F100B02956 /* Products */,
 				4588A2E51E41AD1F008529E3 /* Frameworks */,
 			);
@@ -57,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				452D46EF1E3F35F100B02956 /* testKeras2Tensorflow */,
+				4528461F1E5C0B070014F82B /* testKeras2Tensorflow_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +180,6 @@
 		452D46F11E3F35F100B02956 /* testKeras2Tensorflow */ = {
 			isa = PBXGroup;
 			children = (
-				4588A2F11E43488E008529E3 /* keras2tensorflow */,
 				452D46F91E3F363300B02956 /* testKeras2Tensorflow.cpp */,
 			);
 			path = testKeras2Tensorflow;
@@ -73,6 +188,10 @@
 		4588A2E51E41AD1F008529E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				452846571E5C169C0014F82B /* Accelerate.framework */,
+				452846551E5C16100014F82B /* AssetsLibrary.framework */,
+				452846531E5C15F60014F82B /* CoreMedia.framework */,
+				452846511E5C15DE0014F82B /* AVFoundation.framework */,
 				4588A2E61E41AD1F008529E3 /* libz.tbd */,
 			);
 			name = Frameworks;
@@ -85,11 +204,29 @@
 				4588A2F31E43489A008529E3 /* keras2tensorflow.hpp */,
 			);
 			name = keras2tensorflow;
+			path = testKeras2Tensorflow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4528461E1E5C0B070014F82B /* testKeras2Tensorflow_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452846331E5C0B070014F82B /* Build configuration list for PBXNativeTarget "testKeras2Tensorflow_iOS" */;
+			buildPhases = (
+				4528461B1E5C0B070014F82B /* Sources */,
+				4528461C1E5C0B070014F82B /* Frameworks */,
+				4528461D1E5C0B070014F82B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testKeras2Tensorflow_iOS;
+			productName = testKeras2Tensorflow_iOS;
+			productReference = 4528461F1E5C0B070014F82B /* testKeras2Tensorflow_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		452D46EE1E3F35F100B02956 /* testKeras2Tensorflow */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 452D46F61E3F35F100B02956 /* Build configuration list for PBXNativeTarget "testKeras2Tensorflow" */;
@@ -116,6 +253,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = LoveC;
 				TargetAttributes = {
+					4528461E1E5C0B070014F82B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y3697NHB4K;
+						ProvisioningStyle = Automatic;
+					};
 					452D46EE1E3F35F100B02956 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -128,6 +270,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 452D46E61E3F35F100B02956;
 			productRefGroup = 452D46F01E3F35F100B02956 /* Products */;
@@ -135,11 +278,47 @@
 			projectRoot = "";
 			targets = (
 				452D46EE1E3F35F100B02956 /* testKeras2Tensorflow */,
+				4528461E1E5C0B070014F82B /* testKeras2Tensorflow_iOS */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		4528461D1E5C0B070014F82B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4528464E1E5C0E570014F82B /* 8.png in Resources */,
+				4528464D1E5C0E570014F82B /* 7.png in Resources */,
+				452846481E5C0E570014F82B /* 2.png in Resources */,
+				452846461E5C0E570014F82B /* 0.png in Resources */,
+				4528464F1E5C0E570014F82B /* 9.png in Resources */,
+				452846501E5C0E570014F82B /* mnist.pb in Resources */,
+				452846311E5C0B070014F82B /* LaunchScreen.storyboard in Resources */,
+				4528462E1E5C0B070014F82B /* Assets.xcassets in Resources */,
+				4528464C1E5C0E570014F82B /* 6.png in Resources */,
+				4528464A1E5C0E570014F82B /* 4.png in Resources */,
+				4528462C1E5C0B070014F82B /* Main.storyboard in Resources */,
+				4528464B1E5C0E570014F82B /* 5.png in Resources */,
+				452846491E5C0E570014F82B /* 3.png in Resources */,
+				452846471E5C0E570014F82B /* 1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		4528461B1E5C0B070014F82B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452846361E5C0C180014F82B /* keras2tensorflow.cpp in Sources */,
+				452846291E5C0B070014F82B /* ViewController.mm in Sources */,
+				452846261E5C0B070014F82B /* AppDelegate.m in Sources */,
+				452846231E5C0B070014F82B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		452D46EB1E3F35F100B02956 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,7 +330,87 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		4528462A1E5C0B070014F82B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4528462B1E5C0B070014F82B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4528462F1E5C0B070014F82B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452846301E5C0B070014F82B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		452846341E5C0B070014F82B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: david.yi@chinapnr.com (NCPYBNF5TE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y3697NHB4K;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/;
+				HEADER_SEARCH_PATHS = (
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/include",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/gen/proto",
+				);
+				INFOPLIST_FILE = testKeras2Tensorflow_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/lib/iOS";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+					"-lprotobuf",
+					"-ltensorflow-core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chinapnr.testKeras2Tensorflow-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		452846351E5C0B070014F82B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: david.yi@chinapnr.com (NCPYBNF5TE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y3697NHB4K;
+				FRAMEWORK_SEARCH_PATHS = ../../../../Frameworks/;
+				HEADER_SEARCH_PATHS = (
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/include",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/gen/proto",
+				);
+				INFOPLIST_FILE = testKeras2Tensorflow_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/lib/iOS";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+					"-lprotobuf",
+					"-ltensorflow-core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chinapnr.testKeras2Tensorflow-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		452D46F41E3F35F100B02956 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -243,16 +502,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"../../../../compile/tensorflow-master/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/protobuf/src/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/proto",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/include",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/gen/proto",
 					/usr/local/include/,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"../../../../compile/tensorflow-master/release/lib/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/protobuf-host/lib/",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/lib/MacOS/",
 					/usr/local/lib/,
 				);
 				OTHER_LDFLAGS = (
@@ -272,16 +529,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"../../../../compile/tensorflow-master/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/protobuf/src/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/proto",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/include",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/downloads/eigen",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/tensorflow/contrib/makefile/gen/proto",
 					/usr/local/include/,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"../../../../compile/tensorflow-master/release/lib/",
-					"../../../../compile/tensorflow-master/tensorflow/contrib/makefile/gen/protobuf-host/lib/",
+					"/Users/lei.qiao/Desktop/POC/OCR/compile/tensorflow-1.0.0/release/lib/MacOS/",
 					/usr/local/lib/,
 				);
 				OTHER_LDFLAGS = (
@@ -300,6 +555,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		452846331E5C0B070014F82B /* Build configuration list for PBXNativeTarget "testKeras2Tensorflow_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452846341E5C0B070014F82B /* Debug */,
+				452846351E5C0B070014F82B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		452D46EA1E3F35F100B02956 /* Build configuration list for PBXProject "testKeras2Tensorflow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
