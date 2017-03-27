@@ -226,7 +226,8 @@ class keras2tensorflow:
             elif layer_type == "Dense":
                 tf_layer = keras_dense(keras_layer)
             elif layer_type == "Dropout":
-                tf_layer = keras_dropout(keras_layer)
+                # tf_layer = keras_dropout(keras_layer)
+                continue
             else:
                 assert False, "Unsupported layer type: %s" % layer_type
             
