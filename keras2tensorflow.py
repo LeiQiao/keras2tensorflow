@@ -39,6 +39,7 @@ def load_floats(file, count): assert False, "UNSUPPORT"
 class keras_conv2d:
     weights = None
     biases = None
+    dim_ordering = None
 
     def __init__(self, keras_layer):
         self.weights = keras_layer.get_weights()[0]
@@ -47,13 +48,22 @@ class keras_conv2d:
         if keras_layer.border_mode == "same":
             self.padding = 'SAME'
 
+        self.dim_ordering = "NHWC"
+        if keras_layer.dim_ordering == "th":
+            self.dim_ordering = "NCHW"
+
     def dump_tf_layer(self, prev_tf_layer):
         w = tf.constant(self.weights)
+        if self.dim_ordering == "NCHW":
+            w = tf.transpose(w, [2, 3, 1, 0])
+            prev_tf_layer = tf.transpose(prev_tf_layer, [0, 2, 3, 1])
         b = tf.constant(self.biases)
         tf_layer = tf.nn.conv2d(prev_tf_layer,
                                 w,
                                 strides=[1,1,1,1],
                                 padding=self.padding) + b
+        if self.dim_ordering == "NCHW":
+            tf_layer = tf.transpose(tf_layer, [0, 3, 1, 2])
         return tf_layer
 
     def save_to_file(self, file):
@@ -105,18 +115,28 @@ class keras_activation:
 class keras_maxpool:
     pool_size = None
     padding = None
+    dim_ordering = None
 
     def __init__(self, keras_layer):
         self.pool_size = keras_layer.get_config()['pool_size']
         self.padding = 'VALID'
+
         if keras_layer.border_mode != "valid":
             assert False, "Unsupported padding type: %s" % keras_layer.border_mode
 
+        self.dim_ordering = "NHWC"
+        if keras_layer.dim_ordering == "th":
+            self.dim_ordering = "NCHW"
+
     def dump_tf_layer(self, prev_tf_layer):
+        if self.dim_ordering == "NCHW":
+            prev_tf_layer = tf.transpose(prev_tf_layer, [0, 2, 3, 1])
         tf_layer = tf.nn.max_pool(prev_tf_layer,
                                   ksize=[1, self.pool_size[0], self.pool_size[1], 1],
                                   strides=[1, self.pool_size[0], self.pool_size[1], 1],
                                   padding=self.padding)
+        if self.dim_ordering == "NCHW":
+            tf_layer = tf.transpose(tf_layer, [0, 3, 1, 2])
         return tf_layer
 
     def save_to_file(self, file):
@@ -189,6 +209,7 @@ class keras2tensorflow:
     input_shape = []
 
     def __init__(self, keras_model):
+        self.layers = []
         self.input_shape = keras_model.layers[0].batch_input_shape
         for keras_layer in keras_model.layers:
             layer_type = type(keras_layer).__name__
@@ -211,19 +232,6 @@ class keras2tensorflow:
             
             self.layers.append(tf_layer)
 
-    def dump_tf_layer(self, prev_tf_layer):
-        for tf_layer in self.layers:
-            prev_tf_layer = tf_layer.dump_tf_layer(prev_tf_layer)
-        return prev_tf_layer
-
-    def save_to_file(self, filename):
-        with open(filename, 'wb') as f:
-            num_layers = len(self.layers)
-            f.write(struct.pack('I', num_layers))
-
-            for tf_layer in self.layers:
-                tf_layer.save_to_file(f)
-
     def save_protobuf(self, filename):
         graph_dump = tf.Graph()
         with graph_dump.as_default():
@@ -236,10 +244,28 @@ class keras2tensorflow:
             tf.train.write_graph(graph_def, '', filename, as_text=False)
             sess.close()
 
-    def prediction(self, data):
+    def layer_count(self):
+        return len(self.layers)
+
+    def dump_tf_layer_step(self, prev_tf_layer, index):
+        if (index < 0) or (index >= len(self.layers)): index = len(self.layers)-1
+        now = 0
+        for tf_layer in self.layers:
+            prev_tf_layer = tf_layer.dump_tf_layer(prev_tf_layer)
+            now += 1
+            if now > index: break
+        return prev_tf_layer
+
+    def predict_step(self, data, index):
         sess = tf.Session()
         tf_input = tf.placeholder("float32", self.input_shape, name="input")
-        tf_prediction = self.dump_tf_layer(tf_input)
-        result = sess.run(tf_prediction, feed_dict={tf_input:data})
+        tf_predict = self.dump_tf_layer_step(tf_input, index)
+        result = sess.run(tf_predict, feed_dict={tf_input:data})
         sess.close()
         return result
+
+    def dump_tf_layer(self, prev_tf_layer):
+        return self.dump_tf_layer_step(prev_tf_layer, -1)
+
+    def predict(self, data):
+        return self.predict_step(data, -1)
